@@ -5,6 +5,9 @@ import (
 	"strconv"
 )
 
+// GetResult performs a mathematical operation on two integers based on the operator provided.
+// It returns an error if the operator is not one of the four basic arithmetic operations,
+// or if the second operand is zero and the operator is "/".
 func GetResult(op []string) (int, error) {
 	opInt1, err := strconv.Atoi(op[0])
 	if err != nil {

@@ -19,7 +19,7 @@ func main() {
 	if err != nil {
 		fmt.Println(err)
 	} else {
-		fmt.Println(result)
+		fmt.Printf("Result: %d\n", result)
 	}
 
 }
