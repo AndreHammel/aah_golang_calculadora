@@ -1,13 +1,25 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+
+	"github.com/AndreHammel/aah_golang_calculadora/calculator"
+)
 
 func main() {
-	var (
-		n1 int
-		n2 int
-	)
-	fmt.Scan(&n1, &n2)
+	var input string
+	fmt.Print("Enter the operation (using this format: 2*2):")
+	fmt.Scan(&input)
 
-	fmt.Println(n1 + n2)
+	op := strings.Split(input, "")
+
+	result, err := calculator.GetResult(op)
+
+	if err != nil {
+		fmt.Println(err)
+	} else {
+		fmt.Println(result)
+	}
+
 }
